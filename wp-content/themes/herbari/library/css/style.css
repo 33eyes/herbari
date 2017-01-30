@@ -1861,6 +1861,22 @@ you can add resource intensive styles.
     width: 760px; }
 
   /*********************
+  Wordpress Masonry styles - Arina
+  *********************/
+  /* Makes three columns */
+  .masonry-item {
+    width: 31%;
+    margin: 0 1% 2%; }
+
+  .masonry-item .hentry header {
+    padding: 0.5em 0.5em 0;
+    border: none; }
+
+  .masonry-item .hentry .entry-content {
+    padding: 0.5em;
+    text-align: center; }
+
+  /*********************
   HEADER STYLES
   *********************/
   /*********************
