@@ -35,6 +35,12 @@ Wordpress Masonry styles - Arina
 .masonry-item {
 	width: 31%;
     margin: 0 1% 2%;
+	
+	.post-excerpt {
+		font-family: tuna;
+		color: rgba(0, 0, 0, 0.75);
+		font-size: 1.1em;
+	}
 }
 
 .masonry-item .hentry header {
@@ -43,7 +49,6 @@ Wordpress Masonry styles - Arina
 }
 .masonry-item .hentry .entry-content {
     padding: 0.5em;
-	text-align: center;
 }
 
 
@@ -68,9 +73,12 @@ NAVIGATION STYLES
 	li {
 		float: left;
 		position: relative;
-
+		
+		
 		a {
 			border-bottom: 0;
+			padding-top: 0.25em;
+			padding-bottom: 0.25em;
 
 			/*
 			you can use hover styles here even though this size

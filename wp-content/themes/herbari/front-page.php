@@ -30,14 +30,18 @@
 										</header>
 
 										<section class="entry-content cf">
+										
+										<?php if($featured_image) { ?>
+											
 											<div class="plant-featured-image">
-												<?php if($featured_image) { 
-													echo wp_get_attachment_image( $featured_image, $size );
-												} ?>
+											<?php echo wp_get_attachment_image( $featured_image, $size ); ?>
 											</div>
-											<div class="plant-excerpt">
+											<?php }
+											else { ?>
+											<div class="post-excerpt">
 												<?php the_excerpt(); ?>
 											</div>
+											<?php } ?>
 										</section>
 
 										<footer class="article-footer cf">

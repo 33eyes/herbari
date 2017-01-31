@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
 Site Name:
@@ -485,17 +486,22 @@ FONT FACE (IN YOUR FACE)
   http://www.fontsquirrel.com/
   Be sure to remove the comment brackets.
 */
-/*  @font-face {
-      font-family: 'Font Name';
-      src: url('library/fonts/font-name.eot');
-      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('library/fonts/font-name.woff') format('woff'),
-             url('library/fonts/font-name.ttf') format('truetype'),
-             url('library/fonts/font-name.svg#font-name') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  }
-*/
+@font-face {
+  font-family: tuna;
+  src: url("../fonts/TunaMediumFF/Ligature Inc - Tuna-Medium.otf");
+  /* IE9*/
+  src: url("../fonts/TunaMediumFF/Ligature Inc - Tuna-Medium.ttf") format("truetype");
+  /* chromeπÇüfirefoxπÇüoperaπÇüSafari, Android, iOS 4.2+*/
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: tuna;
+  src: url("../fonts/TunaMediumFF/Ligature Inc - Tuna-MediumItalic.otf");
+  /* IE9*/
+  src: url("../fonts/TunaMediumFF/Ligature Inc - Tuna-MediumItalic.ttf") format("truetype");
+  /* chromeπÇüfirefoxπÇüoperaπÇüSafari, Android, iOS 4.2+*/
+  font-weight: normal;
+  font-style: italic; }
 /*
 The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
@@ -1256,7 +1262,8 @@ body {
   color: #5c6b80;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("../images/backgrounds/purty_wood.png"); }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -1308,12 +1315,13 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: black;
+  font-weight: bold;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: black; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1362,12 +1370,15 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #323944; }
+  background-color: rgba(255, 255, 255, 0.3); }
 
 #logo {
-  margin: 0.75em 0; }
+  margin: 1.75em 0 0.5em; }
   #logo a {
-    color: #fff; }
+    font-family: tuna;
+    color: rgba(204, 143, 60, 0.35);
+    font-size: 3.0em;
+    letter-spacing: 0.1em; }
 
 /*********************
 NAVIGATION STYLES
@@ -1398,6 +1409,7 @@ and more scalable.
       color: #fff;
       text-decoration: none;
       padding: 0.75em;
+      font-size: 1.5em;
       /*
       remember this is for mobile ONLY, so there's no need
       to even declare hover styles here, you can do it in
@@ -1407,6 +1419,10 @@ and more scalable.
     .nav li ul.sub-menu li a,
     .nav li ul.children li a {
       padding-left: 30px; }
+  .nav li.current-menu-item,
+  .nav li.current_page_item,
+  .nav li.current_page_ancestor {
+    background-color: rgba(14, 185, 0, 0.38); }
 
 /* end .nav */
 /*********************
@@ -1418,14 +1434,12 @@ POSTS & CONTENT STYLES
 .hentry {
   background-color: #fff;
   border-radius: 3px;
-  margin-bottom: 1.5em;
-  border: 1px solid #ccc; }
+  margin-bottom: 1.5em; }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
   .hentry footer {
-    padding: 1.5em;
-    border-top: 1px solid #f8f9fa; }
+    padding: 1.5em; }
     .hentry footer p {
       margin: 0; }
 
@@ -1433,7 +1447,8 @@ POSTS & CONTENT STYLES
 .single-title,
 .page-title,
 .entry-title {
-  margin: 0; }
+  margin: 0;
+  font-family: tuna; }
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1448,7 +1463,9 @@ POSTS & CONTENT STYLES
 .byline {
   color: #9fa6b4;
   font-style: italic;
-  margin: 0; }
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1; }
 
 /* entry content */
 .entry-content {
@@ -1739,7 +1756,7 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #323944;
+  background-color: rgba(255, 255, 255, 0.3);
   color: #f8f9fa; }
 
 /*
@@ -1867,14 +1884,17 @@ you can add resource intensive styles.
   .masonry-item {
     width: 31%;
     margin: 0 1% 2%; }
+    .masonry-item .post-excerpt {
+      font-family: tuna;
+      color: rgba(0, 0, 0, 0.75);
+      font-size: 1.1em; }
 
   .masonry-item .hentry header {
     padding: 0.5em 0.5em 0;
     border: none; }
 
   .masonry-item .hentry .entry-content {
-    padding: 0.5em;
-    text-align: center; }
+    padding: 0.5em; }
 
   /*********************
   HEADER STYLES
@@ -1899,6 +1919,8 @@ you can add resource intensive styles.
       /* showing sub-menus */ }
       .nav li a {
         border-bottom: 0;
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
         /*
         you can use hover styles here even though this size
         has the possibility of being a mobile device.
