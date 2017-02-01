@@ -1607,9 +1607,13 @@ WORDPRESS MASONRY STYLES - Arina
       font-weight: bold;
       font-size: 16px; }
       #masonry-container .masonry-item .hentry .entry-content .post-excerpt p {
-        margin: 0; }
+        margin: 0 0 0.5em; }
+      #masonry-container .masonry-item .hentry .entry-content .post-excerpt .likebtn_container {
+        text-align: right;
+        margin-right: 1em;
+        margin-bottom: -1.75em; }
     #masonry-container .masonry-item .hentry .entry-content .plant-featured-image img {
-      margin: 0; }
+      margin: 0 0 0.5em; }
   #masonry-container .masonry-item .hentry footer {
     padding: 0.5em 1em 1em; }
 

@@ -550,11 +550,17 @@ WORDPRESS MASONRY STYLES - Arina
 				font-size: 16px;
 				
 				p {
-					margin: 0;
+					margin: 0 0 0.5em;
+				}
+				
+				.likebtn_container {
+					text-align: right;
+					margin-right: 1em;
+					margin-bottom: -1.75em;
 				}
 			}
 			.plant-featured-image img {
-				margin: 0;
+				margin: 0 0 0.5em;
 			}
 		}
 		
