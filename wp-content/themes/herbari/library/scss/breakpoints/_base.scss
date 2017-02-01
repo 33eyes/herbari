@@ -161,10 +161,6 @@ HEADER STYLES
 
 .header {
     background-color: $hfs-color;
-	
-	//position: fixed;
-    //top: 0;
-    //width: 100%;
 }
 
 	#logo {
@@ -174,7 +170,7 @@ HEADER STYLES
 		a {
 			font-family: $font-brand;
 			color: $brand-color;
-			font-size: 2.0em;
+			font-size: 1.5em;
 			letter-spacing: 0.1em;
 		}
 	}
@@ -194,7 +190,6 @@ and more scalable.
 
 /* Hamburger mobile menu (via Responsive Menu plugin) - Arina */
 div#responsive-menu-container {
-//	margin-top: 86px;
     border-right: 4px solid $highlight-color;
 }
 button#responsive-menu-button, button#responsive-menu-button.responsive-menu-button:hover {
@@ -208,7 +203,7 @@ button#responsive-menu-button, button#responsive-menu-button.responsive-menu-but
 	background-color: $highlight-color;
 }
 #responsive-menu-container #responsive-menu-wrapper {
-    margin-top: 3em;
+    margin-top: 7em;
 }
 
 
