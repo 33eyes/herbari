@@ -267,6 +267,15 @@ wp_enqueue_script( 'masonry' );
 add_action('wp_enqueue_scripts', 'custom_add_masonry');
 
 
+/* Make Nav Menu add the 'current' classes to custom post type Plants */
+function add_nav_menu_classes($classes, $item){
+   if( is_post_type_archive('plants') && ($item->title == "Plants" ) ){
+      $classes[] = 'current-menu-item';
+   }
+   return $classes;
+}
+add_filter('nav_menu_css_class' , 'add_nav_menu_classes' , 10 , 2);
+
 
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
