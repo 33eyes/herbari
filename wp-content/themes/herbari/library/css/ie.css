@@ -35,11 +35,18 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
+/*Custom theme colors - Arina */
+/* Header, footer, sidebar, etc sections color */
+/* Color for the brand title in the header, etc. */
+/* Highlight color, e.g. for selected menu items */
 /*
 Here's a great tutorial on how to
 use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
+/*********************
+BACKGROUNDS - Arina
+*********************/
 /******************************************************************
 Site Name:
 Author:
@@ -87,10 +94,18 @@ The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
 I've edited it a bit, but it's a nice starting point.
 */
+/*********************
+FONT STACKS
+*********************/
 /*
  i imported this one in the functions file so bones would look sweet.
  don't forget to remove it for your site.
 */
+/*********************
+THEME FONTS - Arina
+*********************/
+/* This is the font used in headers, excerpts, etc. */
+/* This is the font used in plain paragraphs, etc. */
 /*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography

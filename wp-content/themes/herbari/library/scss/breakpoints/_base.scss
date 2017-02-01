@@ -24,7 +24,11 @@ body {
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 	
-	background-image: url("../images/backgrounds/purty_wood.png");
+	background-image: $main-background-image;
+
+	:focus {
+		outline: none;
+	}
 }
 
 /********************
@@ -156,16 +160,21 @@ HEADER STYLES
 *********************/
 
 .header {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: $hfs-color;
+	
+	//position: fixed;
+    //top: 0;
+    //width: 100%;
 }
 
 	#logo {
-		margin: 1.75em 0 0.5em;
-
+		//margin: 1.75em 0 0.5em;
+		margin: 0.85em 0 0.5em;
+		
 		a {
-			font-family: tuna;
-			color: rgba(204, 143, 60, 0.35);
-			font-size: 3.0em;
+			font-family: $font-brand;
+			color: $brand-color;
+			font-size: 2.0em;
 			letter-spacing: 0.1em;
 		}
 	}
@@ -181,6 +190,27 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+
+
+/* Hamburger mobile menu (via Responsive Menu plugin) - Arina */
+div#responsive-menu-container {
+//	margin-top: 86px;
+    border-right: 4px solid $highlight-color;
+}
+button#responsive-menu-button, button#responsive-menu-button.responsive-menu-button:hover {
+    opacity: 0.5;
+}
+#responsive-menu-container input.responsive-menu-search-box {
+    font-size: 14px;
+    height: 28px;
+}
+#responsive-menu-container .responsive-menu-item.responsive-menu-current-item, .post-type-archive-plants #responsive-menu-container #responsive-menu-item-47386.responsive-menu-item {
+	background-color: $highlight-color;
+}
+#responsive-menu-container #responsive-menu-wrapper {
+    margin-top: 3em;
+}
+
 
 .nav {
 	border-bottom: 0;
@@ -247,7 +277,7 @@ and more scalable.
 	li.current_page_item,
 	li.current_page_ancestor {
 		
-		background-color: rgba(14, 185, 0, 0.38);
+		background-color: $highlight-color;
 		a {}
 
 	}  /* end current highlighters */
@@ -871,7 +901,7 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: $hfs-color;
 	color: $light-gray;
 }
 

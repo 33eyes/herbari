@@ -53,6 +53,9 @@ I've edited it a bit, but it's a nice starting point.
 */
 
 
+/*********************
+FONT STACKS
+*********************/
 // font stacks
 $sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
@@ -62,6 +65,15 @@ $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
  don't forget to remove it for your site.
 */
 $lato:              'Lato', $sans-serif;
+
+
+/*********************
+THEME FONTS - Arina
+*********************/
+$font-brand:	tuna; /* This is the font used in headers, excerpts, etc. */
+$font-regular:	$lato; /* This is the font used in plain paragraphs, etc. */
+
+
 
 /*
 some nice typographical defaults

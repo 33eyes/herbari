@@ -455,11 +455,18 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
+/*Custom theme colors - Arina */
+/* Header, footer, sidebar, etc sections color */
+/* Color for the brand title in the header, etc. */
+/* Highlight color, e.g. for selected menu items */
 /*
 Here's a great tutorial on how to
 use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
+/*********************
+BACKGROUNDS - Arina
+*********************/
 /******************************************************************
 Site Name:
 Author:
@@ -507,10 +514,18 @@ The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
 I've edited it a bit, but it's a nice starting point.
 */
+/*********************
+FONT STACKS
+*********************/
 /*
  i imported this one in the functions file so bones would look sweet.
  don't forget to remove it for your site.
 */
+/*********************
+THEME FONTS - Arina
+*********************/
+/* This is the font used in headers, excerpts, etc. */
+/* This is the font used in plain paragraphs, etc. */
 /*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
@@ -1264,6 +1279,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("../images/backgrounds/purty_wood.png"); }
+  body :focus {
+    outline: none; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -1373,11 +1390,11 @@ HEADER STYLES
   background-color: rgba(255, 255, 255, 0.3); }
 
 #logo {
-  margin: 1.75em 0 0.5em; }
+  margin: 0.85em 0 0.5em; }
   #logo a {
     font-family: tuna;
     color: rgba(204, 143, 60, 0.35);
-    font-size: 3.0em;
+    font-size: 2.0em;
     letter-spacing: 0.1em; }
 
 /*********************
@@ -1390,6 +1407,23 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+/* Hamburger mobile menu (via Responsive Menu plugin) - Arina */
+div#responsive-menu-container {
+  border-right: 4px solid rgba(14, 185, 0, 0.38); }
+
+button#responsive-menu-button, button#responsive-menu-button.responsive-menu-button:hover {
+  opacity: 0.5; }
+
+#responsive-menu-container input.responsive-menu-search-box {
+  font-size: 14px;
+  height: 28px; }
+
+#responsive-menu-container .responsive-menu-item.responsive-menu-current-item, .post-type-archive-plants #responsive-menu-container #responsive-menu-item-47386.responsive-menu-item {
+  background-color: rgba(14, 185, 0, 0.38); }
+
+#responsive-menu-container #responsive-menu-wrapper {
+  margin-top: 3em; }
+
 .nav {
   border-bottom: 0;
   margin: 0;
