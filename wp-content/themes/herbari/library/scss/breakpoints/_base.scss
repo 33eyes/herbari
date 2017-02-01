@@ -77,7 +77,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
+	width: 94%;
 	margin: 0 auto;
 }
 
@@ -170,7 +170,7 @@ HEADER STYLES
 		a {
 			font-family: $font-brand;
 			color: $brand-color;
-			font-size: 1.5em;
+			font-size: 2em;
 			letter-spacing: 0.1em;
 		}
 	}
@@ -286,6 +286,8 @@ POSTS & CONTENT STYLES
 
 #content {
 	margin-top: 1.5em;
+	
+	font-size: 14px;
 }
 
 		.hentry {
@@ -521,6 +523,47 @@ POSTS & CONTENT STYLES
 	.tags {
 		margin: 0;
 	}
+
+
+	
+/******************************************************************
+WORDPRESS MASONRY STYLES - Arina
+******************************************************************/
+#masonry-container .masonry-item {
+
+    width: 100%;
+	
+	.hentry {
+
+		header {
+			padding: 1em;
+			border: none;
+		}
+		
+		.entry-content {
+			padding: 0 1em;
+			
+			.post-excerpt {
+				font-family: tuna;
+				color: #212121;
+				font-weight: bold;
+				font-size: 16px;
+				
+				p {
+					margin: 0;
+				}
+			}
+			.plant-featured-image img {
+				margin: 0;
+			}
+		}
+		
+		footer {
+			padding: 0.5em 1em 1em;
+		}
+	} /* end .hentry */
+}
+
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -898,6 +941,7 @@ FOOTER STYLES
 	clear: both;
     background-color: $hfs-color;
 	color: $light-gray;
+    font-size: 1.4em;
 }
 
 	/*

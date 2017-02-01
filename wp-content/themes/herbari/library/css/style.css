@@ -1325,7 +1325,7 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 96%;
+  width: 94%;
   margin: 0 auto; }
 
 /*********************
@@ -1394,7 +1394,7 @@ HEADER STYLES
   #logo a {
     font-family: tuna;
     color: rgba(204, 143, 60, 0.35);
-    font-size: 1.5em;
+    font-size: 2em;
     letter-spacing: 0.1em; }
 
 /*********************
@@ -1463,7 +1463,8 @@ button#responsive-menu-button, button#responsive-menu-button.responsive-menu-but
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 1.5em; }
+  margin-top: 1.5em;
+  font-size: 14px; }
 
 .hentry {
   background-color: #fff;
@@ -1588,6 +1589,29 @@ POSTS & CONTENT STYLES
 /* gallery caption styles */
 .tags {
   margin: 0; }
+
+/******************************************************************
+WORDPRESS MASONRY STYLES - Arina
+******************************************************************/
+#masonry-container .masonry-item {
+  width: 100%;
+  /* end .hentry */ }
+  #masonry-container .masonry-item .hentry header {
+    padding: 1em;
+    border: none; }
+  #masonry-container .masonry-item .hentry .entry-content {
+    padding: 0 1em; }
+    #masonry-container .masonry-item .hentry .entry-content .post-excerpt {
+      font-family: tuna;
+      color: #212121;
+      font-weight: bold;
+      font-size: 16px; }
+      #masonry-container .masonry-item .hentry .entry-content .post-excerpt p {
+        margin: 0; }
+    #masonry-container .masonry-item .hentry .entry-content .plant-featured-image img {
+      margin: 0; }
+  #masonry-container .masonry-item .hentry footer {
+    padding: 0.5em 1em 1em; }
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -1791,7 +1815,8 @@ FOOTER STYLES
 .footer {
   clear: both;
   background-color: rgba(255, 255, 255, 0.3);
-  color: #f8f9fa; }
+  color: #f8f9fa;
+  font-size: 1.4em; }
 
 /*
 if you checked out the link above:
