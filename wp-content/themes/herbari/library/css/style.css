@@ -455,10 +455,13 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
-/*Custom theme colors - Arina */
+/************************************
+Custom theme colors - Arina 
+*************************************/
 /* Header, footer, sidebar, etc sections color */
 /* Color for the brand title in the header, etc. */
 /* Highlight color, e.g. for selected menu items */
+/* Category colors */
 /*
 Here's a great tutorial on how to
 use color variables properly:
@@ -1249,6 +1252,18 @@ select {
   background-repeat: no-repeat;
   background-position: 97.5% center; }
 
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Post Excerpts Styles
+
+Make post excerpts look pretty.
+
+******************************************************************/
+.hentry.category-uncategorized .entry-content .post-excerpt {
+  background-color: #f5ddff; }
+
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -1326,6 +1341,7 @@ LAYOUT & GRID STYLES
 *********************/
 .wrap {
   width: 94%;
+  max-width: 320px;
   margin: 0 auto; }
 
 /*********************
@@ -1473,6 +1489,8 @@ POSTS & CONTENT STYLES
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
+  .hentry .entry-content .post-excerpt {
+    padding: 10px; }
   .hentry footer {
     padding: 1.5em; }
     .hentry footer p {
@@ -1862,26 +1880,26 @@ tweeners.
   them in here, they won't work.
   */
   /*********************
+  HEADER STYLES
+  *********************/
+  .header {
+    background-color: rgba(255, 255, 255, 0.3); }
+
+  #logo {
+    margin-top: 1.75em; }
+    #logo a {
+      font-size: 2.7em; }
+
+  /*********************
   NAVIGATION STYLES
   *********************/
-  /* .menu is clearfixed inside mixins.scss */
-  .menu {
-    /* end .menu ul */ }
-    .menu ul {
-      /* end .menu ul li */
-      /* highlight current page */
-      /* end current highlighters */ }
-      .menu ul li {
-        /*
-        plan your menus and drop-downs wisely.
-        */ }
-        .menu ul li a {
-          /*
-          you can use hover styles here even though this size
-          has the possibility of being a mobile device.
-          */ }
+  .nav li {
+    float: left; }
+    .nav li a:focus, .nav li a:hover {
+      background-color: rgba(14, 185, 0, 0.2);
+      color: #fff;
+      text-decoration: none; }
 
-  /* end .menu */
   /*********************
   POSTS & CONTENT STYLES
   *********************/
@@ -1910,7 +1928,24 @@ tweeners.
   check your menus here. do they look good?
   do they need tweaking?
   */
-  /* end .footer-links */ }
+  /* end .footer-links */
+  /****************************************************************
+  Back-to-top button -- Arina
+  ****************************************************************/
+  a.go-top, a.go-top:visited {
+    position: fixed;
+    bottom: 0.75em;
+    right: 5%;
+    text-decoration: none;
+    color: #0eb900;
+    font-size: 26px;
+    padding: 10px;
+    display: none;
+    margin: 0; }
+
+  a.go-top:hover, a.go-top:active, a.go-top:focus {
+    color: #0eb900;
+    text-decoration: none; } }
 /*********************
 TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
@@ -1988,9 +2023,6 @@ you can add resource intensive styles.
         you can use hover styles here even though this size
         has the possibility of being a mobile device.
         */ }
-        .nav li a:hover, .nav li a:focus {
-          color: #fff;
-          text-decoration: underline; }
       .nav li ul.sub-menu,
       .nav li ul.children {
         margin-top: 0;

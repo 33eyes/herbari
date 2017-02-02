@@ -25,7 +25,11 @@
 			</footer>
 
 		</div>
+		
+		<!-- SCROLL-TO-TOP BUTTON -->
+		<a href="#" class="go-top" style="display: none;"><i class="fa fa-angle-double-up fa-2x"></i></a>
 
+		
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 

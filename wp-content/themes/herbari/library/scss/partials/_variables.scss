@@ -43,10 +43,21 @@ $link-hover:        darken($link-color, 9%);
 $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;
 
-/*Custom theme colors - Arina */
+
+
+/************************************
+Custom theme colors - Arina 
+*************************************/
 $hfs-color:         rgba(255, 255, 255, 0.3); /* Header, footer, sidebar, etc sections color */
 $brand-color:      	rgba(204, 143, 60, 0.35); /* Color for the brand title in the header, etc. */
 $highlight-color:	rgba(14, 185, 0, 0.38); /* Highlight color, e.g. for selected menu items */
+$highlight-color-light:	rgba(14, 185, 0, 0.2); 
+$highlight-color-opaque:	rgb(14, 185, 0); 
+
+/* Category colors */
+$color-category-uncategorized: rgb(245, 221, 255);
+
+
 
 /*
 Here's a great tutorial on how to

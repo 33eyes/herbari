@@ -205,10 +205,13 @@ body#tinymce.wp-editor {
   Need help w/ choosing your colors? Try this site out:
   http://0to255.com/
   *********************/
-  /*Custom theme colors - Arina */
+  /************************************
+  Custom theme colors - Arina 
+  *************************************/
   /* Header, footer, sidebar, etc sections color */
   /* Color for the brand title in the header, etc. */
   /* Highlight color, e.g. for selected menu items */
+  /* Category colors */
   /*
   Here's a great tutorial on how to
   use color variables properly:

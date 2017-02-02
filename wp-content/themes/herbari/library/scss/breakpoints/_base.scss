@@ -78,6 +78,7 @@ LAYOUT & GRID STYLES
 
 .wrap {
 	width: 94%;
+	max-width: 320px;
 	margin: 0 auto;
 }
 
@@ -298,6 +299,10 @@ POSTS & CONTENT STYLES
 			header {
 				border-bottom: 1px solid $light-gray;
 				padding: 1.5em;
+			}
+			
+			.entry-content .post-excerpt {
+				padding: 10px;
 			}
 
 			footer {
