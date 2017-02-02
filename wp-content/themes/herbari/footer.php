@@ -18,7 +18,11 @@
 						)); ?>
 					</nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+					<p class="source-org copyright text-center">
+						&copy; <?php echo date('Y'); ?> 
+						<?php bloginfo( 'name' ); ?>
+						| web development by <a href="http://www.arigu.me/">arigu.me</a>
+					</p>
 
 				</div>
 

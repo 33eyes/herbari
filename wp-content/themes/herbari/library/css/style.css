@@ -1296,6 +1296,8 @@ body {
   background-image: url("../images/backgrounds/purty_wood.png"); }
   body :focus {
     outline: none; }
+  body a:hover, body a:focus {
+    text-decoration: none; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -1850,6 +1852,9 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
+.copyright a, .copyright a:hover, .copyright a:focus {
+  color: #0eb900; }
+
 /****************************************************************
 Back-to-top button -- AI
 ****************************************************************/
@@ -1979,34 +1984,40 @@ you can add resource intensive styles.
   LAYOUT & GRID STYLES
   *********************/
   .wrap {
-    width: 760px; }
+    max-width: inherit; }
 
   /*********************
-  Wordpress Masonry styles - Arina
+  Wordpress Masonry styles - AI
   *********************/
   /* Makes three columns */
-  .masonry-item {
+  #masonry-container .masonry-item {
     width: 31%;
     margin: 0 1% 2%; }
-    .masonry-item .post-excerpt {
+    #masonry-container .masonry-item .post-excerpt {
       font-family: tuna;
       color: rgba(0, 0, 0, 0.75);
       font-size: 1.1em; }
-
-  .masonry-item .hentry header {
+  #masonry-container .masonry-item .hentry header {
     padding: 0.5em 0.5em 0;
     border: none; }
-
-  .masonry-item .hentry .entry-content {
+  #masonry-container .masonry-item .hentry .entry-content {
     padding: 0.5em; }
 
   /*********************
   HEADER STYLES
   *********************/
+  .header .wrap {
+    width: 70%; }
+    .header .wrap #logo {
+      margin-top: 2em; }
+      .header .wrap #logo a {
+        font-size: 3em; }
+
   /*********************
   NAVIGATION STYLES
   *********************/
   .nav {
+    font-size: 1.2em;
     border: 0;
     /* end .menu ul li */
     /* highlight current page */
