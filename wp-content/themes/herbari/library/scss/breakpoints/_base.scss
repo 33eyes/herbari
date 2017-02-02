@@ -23,6 +23,12 @@ body {
 	background-color: $white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
+	
+	background-image: $main-background-image;
+
+	:focus {
+		outline: none;
+	}
 }
 
 /********************
@@ -71,7 +77,8 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
+	width: 94%;
+	max-width: 320px;
 	margin: 0 auto;
 }
 
@@ -81,7 +88,8 @@ LINK STYLES
 
 a, a:visited {
 	color: $link-color;
-
+    font-weight: bold;
+	
 	/* on hover */
 	&:hover, &:focus {
 		color: $link-hover;
@@ -153,14 +161,18 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $black;
+    background-color: $hfs-color;
 }
 
 	#logo {
-		margin: 0.75em 0;
-
+		//margin: 1.75em 0 0.5em;
+		margin: 0.85em 0 0.5em;
+		
 		a {
-			color: $white;
+			font-family: $font-brand;
+			color: $brand-color;
+			font-size: 2em;
+			letter-spacing: 0.1em;
 		}
 	}
 
@@ -176,6 +188,26 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
+
+/* Hamburger mobile menu (via Responsive Menu plugin) - Arina */
+div#responsive-menu-container {
+    border-right: 4px solid $highlight-color;
+}
+button#responsive-menu-button, button#responsive-menu-button.responsive-menu-button:hover {
+    opacity: 0.5;
+}
+#responsive-menu-container input.responsive-menu-search-box {
+    font-size: 14px;
+    height: 28px;
+}
+#responsive-menu-container .responsive-menu-item.responsive-menu-current-item, .post-type-archive-plants #responsive-menu-container #responsive-menu-item-47386.responsive-menu-item {
+	background-color: $highlight-color;
+}
+#responsive-menu-container #responsive-menu-wrapper {
+    margin-top: 7em;
+}
+
+
 .nav {
 	border-bottom: 0;
 	margin: 0;
@@ -187,7 +219,8 @@ and more scalable.
 			color: $white;
 			text-decoration: none;
 			padding: 0.75em;
-
+			font-size: 1.5em;
+	
 			/*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -239,7 +272,8 @@ and more scalable.
 	li.current-menu-item,
 	li.current_page_item,
 	li.current_page_ancestor {
-
+		
+		background-color: $highlight-color;
 		a {}
 
 	}  /* end current highlighters */
@@ -253,22 +287,26 @@ POSTS & CONTENT STYLES
 
 #content {
 	margin-top: 1.5em;
+	
+	font-size: 14px;
 }
 
 		.hentry {
 			background-color: $white;
 			border-radius: 3px;
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
 
 			header {
 				border-bottom: 1px solid $light-gray;
 				padding: 1.5em;
 			}
+			
+			.entry-content .post-excerpt {
+				padding: 10px;
+			}
 
 			footer {
 				padding: 1.5em;
-				border-top: 1px solid $light-gray;
 
 				p {
 					margin: 0;
@@ -281,6 +319,7 @@ POSTS & CONTENT STYLES
 		.page-title,
 		.entry-title {
 			margin: 0;
+			font-family: tuna;
 		}
 
 		.single-title {}
@@ -306,6 +345,8 @@ POSTS & CONTENT STYLES
 			color: $meta-gray;
 			font-style: italic;
 			margin: 0;
+			font-size: 0.9em;
+			line-height: 1;
 
 			time {}
 		}
@@ -487,6 +528,53 @@ POSTS & CONTENT STYLES
 	.tags {
 		margin: 0;
 	}
+
+
+	
+/******************************************************************
+WORDPRESS MASONRY STYLES - Arina
+******************************************************************/
+#masonry-container .masonry-item {
+
+    width: 100%;
+	
+	.hentry {
+
+		header {
+			padding: 1em;
+			border: none;
+		}
+		
+		.entry-content {
+			padding: 0 1em;
+			
+			.post-excerpt {
+				font-family: tuna;
+				color: #212121;
+				font-weight: bold;
+				font-size: 16px;
+				
+				p {
+					margin: 0 0 0.5em;
+				}
+				
+				.likebtn_container {
+					text-align: right;
+					margin-right: 1em;
+					margin-bottom: -1.75em;
+				}
+			}
+			.plant-featured-image img {
+				margin: 0 0 0.5em;
+			}
+		}
+		
+		footer {
+			padding: 0.5em 1em 1em;
+		}
+	} /* end .hentry */
+}
+
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -862,8 +950,9 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
+    background-color: $hfs-color;
 	color: $light-gray;
+    font-size: 1.4em;
 }
 
 	/*

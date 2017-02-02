@@ -8,6 +8,15 @@ just edit things like thumbnail sizes, header images,
 sidebars, comments, etc.
 */
 
+/* Custom function -- modify query on home page to display both posts and plants (custom post type) */
+function foo_modify_query_order( $query ) {
+    if ( $query->is_home() && $query->is_main_query() ) 
+        $query->set( 'post_type' , array('post', 'plants') );
+	return $query;
+}
+add_action( 'pre_get_posts', 'foo_modify_query_order' );
+
+
 // LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'library/bones.php' );
 
@@ -18,7 +27,6 @@ require_once( 'library/bones.php' );
 LAUNCH BONES
 Let's get everything up and running.
 *********************/
-
 function bones_ahoy() {
 
   //Allow editor style.
@@ -243,5 +251,31 @@ function bones_fonts() {
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
+
+
+
+/*********************
+Arinas custom functions start here.
+*********************/
+
+/* Added Wordpress Masonry */
+// Pull Masonry from the core of WordPress
+function custom_add_masonry() {
+wp_enqueue_script( 'masonry' );
+}
+
+add_action('wp_enqueue_scripts', 'custom_add_masonry');
+
+
+/* Make Nav Menu add the 'current' classes to custom post type Plants */
+function add_nav_menu_classes($classes, $item){
+   if( is_post_type_archive('plants') && ($item->title == "Plants" ) ){
+      $classes[] = 'current-menu-item';
+   }
+   return $classes;
+}
+add_filter('nav_menu_css_class' , 'add_nav_menu_classes' , 10 , 2);
+
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

@@ -1,0 +1,15 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Post Excerpts Styles
+
+Make post excerpts look pretty.
+
+******************************************************************/
+
+.hentry.category-uncategorized {
+	.entry-content .post-excerpt {
+		background-color: $color-category-uncategorized;
+	}
+}

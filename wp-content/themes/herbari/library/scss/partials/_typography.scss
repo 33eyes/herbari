@@ -28,17 +28,22 @@ FONT FACE (IN YOUR FACE)
   Be sure to remove the comment brackets.
 */
 
-/*  @font-face {
-      font-family: 'Font Name';
-      src: url('library/fonts/font-name.eot');
-      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('library/fonts/font-name.woff') format('woff'),
-             url('library/fonts/font-name.ttf') format('truetype'),
-             url('library/fonts/font-name.svg#font-name') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  }
-*/
+@font-face {
+	font-family: tuna;	
+	src: url("../fonts/TunaMediumFF/Ligature Inc - Tuna-Medium.otf"); /* IE9*/
+	src: url("../fonts/TunaMediumFF/Ligature Inc - Tuna-Medium.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: tuna;	
+	src: url("../fonts/TunaMediumFF/Ligature Inc - Tuna-MediumItalic.otf"); /* IE9*/
+	src: url("../fonts/TunaMediumFF/Ligature Inc - Tuna-MediumItalic.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+
+	font-weight: normal;
+	font-style: italic;
+}
 
 
 /*
@@ -48,6 +53,9 @@ I've edited it a bit, but it's a nice starting point.
 */
 
 
+/*********************
+FONT STACKS
+*********************/
 // font stacks
 $sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
@@ -57,6 +65,15 @@ $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
  don't forget to remove it for your site.
 */
 $lato:              'Lato', $sans-serif;
+
+
+/*********************
+THEME FONTS - Arina
+*********************/
+$font-brand:	tuna; /* This is the font used in headers, excerpts, etc. */
+$font-regular:	$lato; /* This is the font used in plain paragraphs, etc. */
+
+
 
 /*
 some nice typographical defaults

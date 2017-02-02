@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
 Site Name:
@@ -454,11 +455,21 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
+/************************************
+Custom theme colors - Arina 
+*************************************/
+/* Header, footer, sidebar, etc sections color */
+/* Color for the brand title in the header, etc. */
+/* Highlight color, e.g. for selected menu items */
+/* Category colors */
 /*
 Here's a great tutorial on how to
 use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
+/*********************
+BACKGROUNDS - Arina
+*********************/
 /******************************************************************
 Site Name:
 Author:
@@ -485,26 +496,39 @@ FONT FACE (IN YOUR FACE)
   http://www.fontsquirrel.com/
   Be sure to remove the comment brackets.
 */
-/*  @font-face {
-      font-family: 'Font Name';
-      src: url('library/fonts/font-name.eot');
-      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('library/fonts/font-name.woff') format('woff'),
-             url('library/fonts/font-name.ttf') format('truetype'),
-             url('library/fonts/font-name.svg#font-name') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  }
-*/
+@font-face {
+  font-family: tuna;
+  src: url("../fonts/TunaMediumFF/Ligature Inc - Tuna-Medium.otf");
+  /* IE9*/
+  src: url("../fonts/TunaMediumFF/Ligature Inc - Tuna-Medium.ttf") format("truetype");
+  /* chromeπÇüfirefoxπÇüoperaπÇüSafari, Android, iOS 4.2+*/
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: tuna;
+  src: url("../fonts/TunaMediumFF/Ligature Inc - Tuna-MediumItalic.otf");
+  /* IE9*/
+  src: url("../fonts/TunaMediumFF/Ligature Inc - Tuna-MediumItalic.ttf") format("truetype");
+  /* chromeπÇüfirefoxπÇüoperaπÇüSafari, Android, iOS 4.2+*/
+  font-weight: normal;
+  font-style: italic; }
 /*
 The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
 I've edited it a bit, but it's a nice starting point.
 */
+/*********************
+FONT STACKS
+*********************/
 /*
  i imported this one in the functions file so bones would look sweet.
  don't forget to remove it for your site.
 */
+/*********************
+THEME FONTS - Arina
+*********************/
+/* This is the font used in headers, excerpts, etc. */
+/* This is the font used in plain paragraphs, etc. */
 /*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
@@ -1228,6 +1252,18 @@ select {
   background-repeat: no-repeat;
   background-position: 97.5% center; }
 
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Post Excerpts Styles
+
+Make post excerpts look pretty.
+
+******************************************************************/
+.hentry.category-uncategorized .entry-content .post-excerpt {
+  background-color: #f5ddff; }
+
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -1256,7 +1292,10 @@ body {
   color: #5c6b80;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("../images/backgrounds/purty_wood.png"); }
+  body :focus {
+    outline: none; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -1301,19 +1340,21 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 96%;
+  width: 94%;
+  max-width: 320px;
   margin: 0 auto; }
 
 /*********************
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: black;
+  font-weight: bold;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: black; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1362,12 +1403,15 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #323944; }
+  background-color: rgba(255, 255, 255, 0.3); }
 
 #logo {
-  margin: 0.75em 0; }
+  margin: 0.85em 0 0.5em; }
   #logo a {
-    color: #fff; }
+    font-family: tuna;
+    color: rgba(204, 143, 60, 0.35);
+    font-size: 2em;
+    letter-spacing: 0.1em; }
 
 /*********************
 NAVIGATION STYLES
@@ -1379,6 +1423,23 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+/* Hamburger mobile menu (via Responsive Menu plugin) - Arina */
+div#responsive-menu-container {
+  border-right: 4px solid rgba(14, 185, 0, 0.38); }
+
+button#responsive-menu-button, button#responsive-menu-button.responsive-menu-button:hover {
+  opacity: 0.5; }
+
+#responsive-menu-container input.responsive-menu-search-box {
+  font-size: 14px;
+  height: 28px; }
+
+#responsive-menu-container .responsive-menu-item.responsive-menu-current-item, .post-type-archive-plants #responsive-menu-container #responsive-menu-item-47386.responsive-menu-item {
+  background-color: rgba(14, 185, 0, 0.38); }
+
+#responsive-menu-container #responsive-menu-wrapper {
+  margin-top: 7em; }
+
 .nav {
   border-bottom: 0;
   margin: 0;
@@ -1398,6 +1459,7 @@ and more scalable.
       color: #fff;
       text-decoration: none;
       padding: 0.75em;
+      font-size: 1.5em;
       /*
       remember this is for mobile ONLY, so there's no need
       to even declare hover styles here, you can do it in
@@ -1407,25 +1469,30 @@ and more scalable.
     .nav li ul.sub-menu li a,
     .nav li ul.children li a {
       padding-left: 30px; }
+  .nav li.current-menu-item,
+  .nav li.current_page_item,
+  .nav li.current_page_ancestor {
+    background-color: rgba(14, 185, 0, 0.38); }
 
 /* end .nav */
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 1.5em; }
+  margin-top: 1.5em;
+  font-size: 14px; }
 
 .hentry {
   background-color: #fff;
   border-radius: 3px;
-  margin-bottom: 1.5em;
-  border: 1px solid #ccc; }
+  margin-bottom: 1.5em; }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
+  .hentry .entry-content .post-excerpt {
+    padding: 10px; }
   .hentry footer {
-    padding: 1.5em;
-    border-top: 1px solid #f8f9fa; }
+    padding: 1.5em; }
     .hentry footer p {
       margin: 0; }
 
@@ -1433,7 +1500,8 @@ POSTS & CONTENT STYLES
 .single-title,
 .page-title,
 .entry-title {
-  margin: 0; }
+  margin: 0;
+  font-family: tuna; }
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1448,7 +1516,9 @@ POSTS & CONTENT STYLES
 .byline {
   color: #9fa6b4;
   font-style: italic;
-  margin: 0; }
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1; }
 
 /* entry content */
 .entry-content {
@@ -1537,6 +1607,33 @@ POSTS & CONTENT STYLES
 /* gallery caption styles */
 .tags {
   margin: 0; }
+
+/******************************************************************
+WORDPRESS MASONRY STYLES - Arina
+******************************************************************/
+#masonry-container .masonry-item {
+  width: 100%;
+  /* end .hentry */ }
+  #masonry-container .masonry-item .hentry header {
+    padding: 1em;
+    border: none; }
+  #masonry-container .masonry-item .hentry .entry-content {
+    padding: 0 1em; }
+    #masonry-container .masonry-item .hentry .entry-content .post-excerpt {
+      font-family: tuna;
+      color: #212121;
+      font-weight: bold;
+      font-size: 16px; }
+      #masonry-container .masonry-item .hentry .entry-content .post-excerpt p {
+        margin: 0 0 0.5em; }
+      #masonry-container .masonry-item .hentry .entry-content .post-excerpt .likebtn_container {
+        text-align: right;
+        margin-right: 1em;
+        margin-bottom: -1.75em; }
+    #masonry-container .masonry-item .hentry .entry-content .plant-featured-image img {
+      margin: 0 0 0.5em; }
+  #masonry-container .masonry-item .hentry footer {
+    padding: 0.5em 1em 1em; }
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -1739,8 +1836,9 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #323944;
-  color: #f8f9fa; }
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #f8f9fa;
+  font-size: 1.4em; }
 
 /*
 if you checked out the link above:
@@ -1782,26 +1880,26 @@ tweeners.
   them in here, they won't work.
   */
   /*********************
+  HEADER STYLES
+  *********************/
+  .header {
+    background-color: rgba(255, 255, 255, 0.3); }
+
+  #logo {
+    margin-top: 1.75em; }
+    #logo a {
+      font-size: 2.7em; }
+
+  /*********************
   NAVIGATION STYLES
   *********************/
-  /* .menu is clearfixed inside mixins.scss */
-  .menu {
-    /* end .menu ul */ }
-    .menu ul {
-      /* end .menu ul li */
-      /* highlight current page */
-      /* end current highlighters */ }
-      .menu ul li {
-        /*
-        plan your menus and drop-downs wisely.
-        */ }
-        .menu ul li a {
-          /*
-          you can use hover styles here even though this size
-          has the possibility of being a mobile device.
-          */ }
+  .nav li {
+    float: left; }
+    .nav li a:focus, .nav li a:hover {
+      background-color: rgba(14, 185, 0, 0.2);
+      color: #fff;
+      text-decoration: none; }
 
-  /* end .menu */
   /*********************
   POSTS & CONTENT STYLES
   *********************/
@@ -1830,7 +1928,24 @@ tweeners.
   check your menus here. do they look good?
   do they need tweaking?
   */
-  /* end .footer-links */ }
+  /* end .footer-links */
+  /****************************************************************
+  Back-to-top button -- Arina
+  ****************************************************************/
+  a.go-top, a.go-top:visited {
+    position: fixed;
+    bottom: 0.75em;
+    right: 5%;
+    text-decoration: none;
+    color: #0eb900;
+    font-size: 26px;
+    padding: 10px;
+    display: none;
+    margin: 0; }
+
+  a.go-top:hover, a.go-top:active, a.go-top:focus {
+    color: #0eb900;
+    text-decoration: none; } }
 /*********************
 TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
@@ -1861,6 +1976,25 @@ you can add resource intensive styles.
     width: 760px; }
 
   /*********************
+  Wordpress Masonry styles - Arina
+  *********************/
+  /* Makes three columns */
+  .masonry-item {
+    width: 31%;
+    margin: 0 1% 2%; }
+    .masonry-item .post-excerpt {
+      font-family: tuna;
+      color: rgba(0, 0, 0, 0.75);
+      font-size: 1.1em; }
+
+  .masonry-item .hentry header {
+    padding: 0.5em 0.5em 0;
+    border: none; }
+
+  .masonry-item .hentry .entry-content {
+    padding: 0.5em; }
+
+  /*********************
   HEADER STYLES
   *********************/
   /*********************
@@ -1883,13 +2017,12 @@ you can add resource intensive styles.
       /* showing sub-menus */ }
       .nav li a {
         border-bottom: 0;
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
         /*
         you can use hover styles here even though this size
         has the possibility of being a mobile device.
         */ }
-        .nav li a:hover, .nav li a:focus {
-          color: #fff;
-          text-decoration: underline; }
       .nav li ul.sub-menu,
       .nav li ul.children {
         margin-top: 0;
