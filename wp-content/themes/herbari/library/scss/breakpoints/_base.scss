@@ -189,7 +189,7 @@ and more scalable.
 */
 
 
-/* Hamburger mobile menu (via Responsive Menu plugin) - Arina */
+/* Hamburger mobile menu (via Responsive Menu plugin) - AI */
 div#responsive-menu-container {
     border-right: 4px solid $highlight-color;
 }
@@ -532,7 +532,7 @@ POSTS & CONTENT STYLES
 
 	
 /******************************************************************
-WORDPRESS MASONRY STYLES - Arina
+WORDPRESS MASONRY STYLES - AI
 ******************************************************************/
 #masonry-container .masonry-item {
 
@@ -976,3 +976,11 @@ FOOTER STYLES
 
 
 	.copyright {}
+
+	
+/****************************************************************
+Back-to-top button -- AI
+****************************************************************/
+a.go-top {
+    color: transparent;
+}

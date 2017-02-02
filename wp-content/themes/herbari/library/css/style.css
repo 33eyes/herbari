@@ -1423,7 +1423,7 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-/* Hamburger mobile menu (via Responsive Menu plugin) - Arina */
+/* Hamburger mobile menu (via Responsive Menu plugin) - AI */
 div#responsive-menu-container {
   border-right: 4px solid rgba(14, 185, 0, 0.38); }
 
@@ -1609,7 +1609,7 @@ POSTS & CONTENT STYLES
   margin: 0; }
 
 /******************************************************************
-WORDPRESS MASONRY STYLES - Arina
+WORDPRESS MASONRY STYLES - AI
 ******************************************************************/
 #masonry-container .masonry-item {
   width: 100%;
@@ -1850,6 +1850,12 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
+/****************************************************************
+Back-to-top button -- AI
+****************************************************************/
+a.go-top {
+  color: transparent; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -1930,7 +1936,7 @@ tweeners.
   */
   /* end .footer-links */
   /****************************************************************
-  Back-to-top button -- Arina
+  Back-to-top button -- AI
   ****************************************************************/
   a.go-top, a.go-top:visited {
     position: fixed;
