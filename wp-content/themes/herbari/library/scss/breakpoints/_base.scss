@@ -301,7 +301,6 @@ POSTS & CONTENT STYLES
 			margin-bottom: 1.5em;
 
 			header {
-				border-bottom: 1px solid $light-gray;
 				padding: 1.5em;
 			}
 			
@@ -324,6 +323,9 @@ POSTS & CONTENT STYLES
 		.entry-title {
 			margin: 0;
 			font-family: tuna;
+			    
+			color: black;
+			font-weight: bold;
 		}
 
 		.single-title {}
@@ -555,7 +557,7 @@ WORDPRESS MASONRY STYLES - AI
 			.post-excerpt {
 				font-family: tuna;
 				color: #212121;
-				font-weight: bold;
+				//font-weight: bold;
 				font-size: 16px;
 				
 				p {
@@ -579,7 +581,13 @@ WORDPRESS MASONRY STYLES - AI
 	} /* end .hentry */
 }
 
-
+/******************************************************************
+ABOUT PAGE STYLES -- Arina
+******************************************************************/
+.page-template-page-about .entry-content p {
+    font-size: 1.3em;
+}	
+	
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/

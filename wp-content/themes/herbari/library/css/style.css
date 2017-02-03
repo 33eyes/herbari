@@ -1006,7 +1006,7 @@ textarea,
   padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
-  color: #5c6b80;
+  color: #3f3f3f;
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
@@ -1289,7 +1289,7 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #5c6b80;
+  color: #3f3f3f;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1489,7 +1489,6 @@ POSTS & CONTENT STYLES
   border-radius: 3px;
   margin-bottom: 1.5em; }
   .hentry header {
-    border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
   .hentry .entry-content .post-excerpt {
     padding: 10px; }
@@ -1503,7 +1502,9 @@ POSTS & CONTENT STYLES
 .page-title,
 .entry-title {
   margin: 0;
-  font-family: tuna; }
+  font-family: tuna;
+  color: black;
+  font-weight: bold; }
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1624,7 +1625,6 @@ WORDPRESS MASONRY STYLES - AI
     #masonry-container .masonry-item .hentry .entry-content .post-excerpt {
       font-family: tuna;
       color: #212121;
-      font-weight: bold;
       font-size: 16px; }
       #masonry-container .masonry-item .hentry .entry-content .post-excerpt p {
         margin: 0 0 0.5em; }
@@ -1636,6 +1636,12 @@ WORDPRESS MASONRY STYLES - AI
       margin: 0 0 0.5em; }
   #masonry-container .masonry-item .hentry footer {
     padding: 0.5em 1em 1em; }
+
+/******************************************************************
+ABOUT PAGE STYLES -- Arina
+******************************************************************/
+.page-template-page-about .entry-content p {
+  font-size: 1.3em; }
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -1676,10 +1682,10 @@ PAGE NAVI STYLES
       color: #fff; }
   .pagination .current {
     cursor: default;
-    color: #5c6b80; }
+    color: #3f3f3f; }
     .pagination .current:hover, .pagination .current:focus {
       background-color: #fff;
-      color: #5c6b80; }
+      color: #3f3f3f; }
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
@@ -1790,7 +1796,7 @@ COMMENT FORM STYLES
   font-style: italic;
   margin: 0; }
   .logged-in-as a {
-    color: #5c6b80; }
+    color: #3f3f3f; }
 
 .comment-form-comment {
   margin: 1.5em 0 0.75em; }

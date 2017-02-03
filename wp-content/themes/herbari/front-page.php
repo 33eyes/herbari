@@ -33,7 +33,7 @@
 										
 										<?php if($featured_image) { ?>
 											
-											<div class="plant-featured-image">
+											<div class="plant-featured-image text-center">
 											<?php echo wp_get_attachment_image( $featured_image, $size ); ?>
 											</div>
 											<?php }
