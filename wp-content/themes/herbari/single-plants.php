@@ -25,6 +25,7 @@
 							<?php if (have_posts()) : while (have_posts()) : the_post(); 
 							$featured_image = get_field("featured_image");
 							$size = "full"; 
+							$plant_details = get_field("plant_details");
 							?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
@@ -32,23 +33,30 @@
 								<header class="article-header">
 
 									<h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) ), get_the_term_list( $post->ID, 'custom_cat', ' ', ', ', '' ) );
-									?></p>
+									<p class="byline vcard">
+										<?php print(
+										/* the time the post was published */
+										'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
+										); ?>
+									</p>
 
 								</header>
 
 								<section class="entry-content cf">
-									<div class="plant-featured-image">
-										<?php if($featured_image) { 
-											echo wp_get_attachment_image( $featured_image, $size );
-										} ?>
+									<div>
+										<div class="plant-featured-image">
+											<?php if($featured_image) { 
+												echo wp_get_attachment_image( $featured_image, $size );
+											} ?>
+										</div>
+										<div class="plant-details">
+											<?php echo $plant_details; ?>
+										</div>
 									</div>
-									<div class="plant-excerpt">
-										<?php the_excerpt(); ?>
-									</div>
-									<div class="plant-content">
-										<?php the_content(); ?>
+									<div>
+										<div class="plant-content">
+											<?php the_content(); ?>
+										</div>
 									</div>
 								</section> <!-- end article section -->
 
@@ -81,7 +89,7 @@
 
 						</main>
 
-						<?php get_sidebar(); ?>
+						<?php //get_sidebar(); ?>
 
 				</div>
 

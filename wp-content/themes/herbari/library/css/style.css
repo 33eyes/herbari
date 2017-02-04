@@ -957,7 +957,7 @@ You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
 .blue-btn, .comment-reply-link, #submit {
-  background-color: #2980b9; }
+  background-color: #0eb900; }
   .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
     background-color: #2574a8; }
   .blue-btn:active, .comment-reply-link:active, #submit:active {
@@ -1498,6 +1498,19 @@ POSTS & CONTENT STYLES
       margin: 0; }
 
 /* end .hentry */
+article.plants .entry-content {
+  padding-top: 0; }
+article.plants .plant-details {
+  background-color: rgba(234, 192, 129, 0.35);
+  padding: 15px;
+  font-style: italic;
+  font-size: 1.2em; }
+  article.plants .plant-details p {
+    margin: 0; }
+article.plants .plant-content {
+  margin-top: 2em;
+  font-size: 1.15em; }
+
 .single-title,
 .page-title,
 .entry-title {
@@ -1610,6 +1623,18 @@ POSTS & CONTENT STYLES
 /* gallery caption styles */
 .tags {
   margin: 0; }
+
+/* Social media styles for posts */
+div.likebtn_container {
+  text-align: right;
+  float: right;
+  margin-top: 1.5em; }
+
+.addtoany_share_save_container.addtoany_content_bottom {
+  float: left;
+  clear: none;
+  margin: 0;
+  margin-top: 1.5em; }
 
 /******************************************************************
 WORDPRESS MASONRY STYLES - AI
