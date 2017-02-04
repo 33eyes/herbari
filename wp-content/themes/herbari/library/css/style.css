@@ -957,7 +957,7 @@ You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
 .blue-btn, .comment-reply-link, #submit {
-  background-color: #0eb900; }
+  background-color: rgba(14, 185, 0, 0.7); }
   .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
     background-color: #2574a8; }
   .blue-btn:active, .comment-reply-link:active, #submit:active {
@@ -1491,7 +1491,14 @@ POSTS & CONTENT STYLES
   .hentry header {
     padding: 1.5em; }
   .hentry .entry-content .post-excerpt {
-    padding: 10px; }
+    padding: 15px;
+    font-family: tuna;
+    font-size: 1.2em; }
+    .hentry .entry-content .post-excerpt p {
+      margin: 0; }
+  .hentry .entry-content .field-note-content {
+    margin-top: 2em;
+    font-size: 1.15em; }
   .hentry footer {
     padding: 1.5em; }
     .hentry footer p {
@@ -1538,7 +1545,7 @@ article.plants .plant-content {
 
 /* entry content */
 .entry-content {
-  padding: 1.5em 1.5em 0;
+  padding: 0 1.5em 0;
   /*
   image alignment on a screen this size may be
   a bit difficult. It's set to start aligning
@@ -1650,9 +1657,14 @@ WORDPRESS MASONRY STYLES - AI
     #masonry-container .masonry-item .hentry .entry-content .post-excerpt {
       font-family: tuna;
       color: #212121;
-      font-size: 16px; }
+      font-size: 16px;
+      font-weight: normal; }
       #masonry-container .masonry-item .hentry .entry-content .post-excerpt p {
         margin: 0 0 0.5em; }
+      #masonry-container .masonry-item .hentry .entry-content .post-excerpt .read-more {
+        color: white;
+        font-weight: bold;
+        font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
       #masonry-container .masonry-item .hentry .entry-content .post-excerpt .likebtn_container {
         text-align: right;
         margin-right: 1em;
@@ -1666,7 +1678,8 @@ WORDPRESS MASONRY STYLES - AI
 ABOUT PAGE STYLES -- Arina
 ******************************************************************/
 .page-template-page-about .entry-content p {
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  padding-top: 2em; }
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -1925,7 +1938,8 @@ tweeners.
   HEADER STYLES
   *********************/
   .header {
-    background-color: rgba(255, 255, 255, 0.3); }
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center; }
 
   #logo {
     margin-top: 1.75em; }
@@ -1936,7 +1950,9 @@ tweeners.
   NAVIGATION STYLES
   *********************/
   .nav li {
-    float: left; }
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px; }
     .nav li a:focus, .nav li a:hover {
       background-color: rgba(14, 185, 0, 0.2);
       color: #fff;
@@ -2017,6 +2033,15 @@ you can add resource intensive styles.
   .wrap {
     max-width: inherit; }
 
+  .single #main {
+    max-width: 700px; }
+
+  /*********************
+  POSTS & CONTENT STYLES
+  *********************/
+  article.plants .plant-details {
+    height: 300px; }
+
   /*********************
   Wordpress Masonry styles - AI
   *********************/
@@ -2029,10 +2054,10 @@ you can add resource intensive styles.
       color: rgba(0, 0, 0, 0.75);
       font-size: 1.1em; }
   #masonry-container .masonry-item .hentry header {
-    padding: 0.5em 0.5em 0;
+    padding: 0.5em 0.75em 0;
     border: none; }
   #masonry-container .masonry-item .hentry .entry-content {
-    padding: 0.5em; }
+    padding: 0.75em; }
 
   /*********************
   HEADER STYLES
@@ -2057,7 +2082,9 @@ you can add resource intensive styles.
       background: #323944;
       margin-top: 0; }
     .nav li {
-      float: left;
+      display: inline-block;
+      margin-left: 3px;
+      margin-right: 3px;
       position: relative;
       /*
       plan your menus and drop-downs wisely.
@@ -2171,7 +2198,10 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .wrap {
-    width: 1040px; } }
+    width: 1040px; }
+
+  .single .wrap, .page-template-page-about .wrap {
+    width: 700px; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.

@@ -12,3 +12,9 @@ be seen on the Desktop.
 .wrap {
   width: 1040px;
 }
+
+.single, .page-template-page-about {
+	.wrap {
+		width: 700px;
+	}
+}

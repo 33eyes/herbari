@@ -20,7 +20,7 @@
 
 				<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="m-all t-all d-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); 
 							$featured_image = get_field("featured_image");
@@ -44,16 +44,16 @@
 
 								<section class="entry-content cf">
 									<div>
-										<div class="plant-featured-image">
+										<div class="plant-featured-image t-1of2 d-1of2">
 											<?php if($featured_image) { 
 												echo wp_get_attachment_image( $featured_image, $size );
 											} ?>
 										</div>
-										<div class="plant-details">
+										<div class="plant-details t-1of2 d-1of2">
 											<?php echo $plant_details; ?>
 										</div>
 									</div>
-									<div>
+									<div class="t-all d-all">
 										<div class="plant-content">
 											<?php the_content(); ?>
 										</div>

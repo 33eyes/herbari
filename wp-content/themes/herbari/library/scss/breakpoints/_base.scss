@@ -304,8 +304,21 @@ POSTS & CONTENT STYLES
 		padding: 1.5em;
 	}
 	
-	.entry-content .post-excerpt {
-		padding: 10px;
+	.entry-content {
+		.post-excerpt {
+			padding: 15px;
+			font-family: tuna;
+			font-size: 1.2em;
+
+			p {
+				margin: 0;
+			}
+		}
+		
+		.field-note-content {
+			margin-top: 2em;
+			font-size: 1.15em;
+		}
 	}
 
 	footer {
@@ -382,7 +395,7 @@ article.plants {
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 1.5em 0;
+			padding: 0 1.5em 0;
 
 			p {
 				margin: 0 0 1.5em;
@@ -592,9 +605,16 @@ WORDPRESS MASONRY STYLES - AI
 				font-family: tuna;
 				color: #212121;
 				font-size: 16px;
+				font-weight: normal;
 				
 				p {
 					margin: 0 0 0.5em;
+				}
+				
+				.read-more {
+					color: white;
+					font-weight: bold;
+					font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 				}
 				
 				.likebtn_container {
@@ -619,6 +639,7 @@ ABOUT PAGE STYLES -- Arina
 ******************************************************************/
 .page-template-page-about .entry-content p {
     font-size: 1.3em;
+    padding-top: 2em;
 }	
 	
 /******************************************************************
@@ -1033,4 +1054,9 @@ Back-to-top button -- AI
 a.go-top {
     color: transparent;
 }
+
+
+
+	
+
 

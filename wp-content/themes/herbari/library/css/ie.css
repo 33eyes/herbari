@@ -211,7 +211,8 @@ them in here, they won't work.
 HEADER STYLES
 *********************/
 .header {
-  background-color: rgba(255, 255, 255, 0.3); }
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center; }
 
 #logo {
   margin-top: 1.75em; }
@@ -222,7 +223,9 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 .nav li {
-  float: left; }
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px; }
   .nav li a:focus, .nav li a:hover {
     background-color: rgba(14, 185, 0, 0.2);
     color: #fff;
@@ -297,6 +300,15 @@ LAYOUT & GRID STYLES
 .wrap {
   max-width: inherit; }
 
+.single #main {
+  max-width: 700px; }
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+article.plants .plant-details {
+  height: 300px; }
+
 /*********************
 Wordpress Masonry styles - AI
 *********************/
@@ -309,10 +321,10 @@ Wordpress Masonry styles - AI
     color: rgba(0, 0, 0, 0.75);
     font-size: 1.1em; }
 #masonry-container .masonry-item .hentry header {
-  padding: 0.5em 0.5em 0;
+  padding: 0.5em 0.75em 0;
   border: none; }
 #masonry-container .masonry-item .hentry .entry-content {
-  padding: 0.5em; }
+  padding: 0.75em; }
 
 /*********************
 HEADER STYLES
@@ -337,7 +349,9 @@ NAVIGATION STYLES
     background: #323944;
     margin-top: 0; }
   .nav li {
-    float: left;
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
     position: relative;
     /*
     plan your menus and drop-downs wisely.
@@ -445,6 +459,9 @@ be seen on the Desktop.
 ******************************************************************/
 .wrap {
   width: 1040px; }
+
+.single .wrap, .page-template-page-about .wrap {
+  width: 700px; }
 
 /*
 you can call the larger styles if you want, but there's really no need

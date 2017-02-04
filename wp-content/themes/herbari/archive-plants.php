@@ -30,44 +30,45 @@
 								?>
 
 								<div class="masonry-item">
-									<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+									<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+										<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
-										<header class="article-header">
+											<header class="article-header">
 
-											<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-											<p class="byline entry-meta vcard">
-																				<?php print(
-															/* the time the post was published */
-															'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
-														); ?>
-											</p>
+												<h1 class="h2 entry-title"><?php the_title(); ?></h1>
+												<p class="byline entry-meta vcard">
+																					<?php print(
+																/* the time the post was published */
+																'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
+															); ?>
+												</p>
 
-										</header>
+											</header>
 
-										<section class="entry-content cf">
-										
-										<?php if($featured_image) { ?>
+											<section class="entry-content cf">
 											
-											<div class="plant-featured-image text-center">
-											<?php echo wp_get_attachment_image( $featured_image, $size ); ?>
-											</div>
-											<?php }
-											else { ?>
-											<div class="post-excerpt">
-												<?php the_excerpt(); ?>
-											</div>
-											<?php } ?>
-										</section>
+											<?php if($featured_image) { ?>
+												
+												<div class="plant-featured-image text-center">
+												<?php echo wp_get_attachment_image( $featured_image, $size ); ?>
+												</div>
+												<?php }
+												else { ?>
+												<div class="post-excerpt">
+													<?php the_excerpt(); ?>
+												</div>
+												<?php } ?>
+											</section>
 
-										<footer class="article-footer cf">
-											<p class="footer-comment-count">
-												<?php comments_number( '', __( '<span>1</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?>
-											</p>
+											<footer class="article-footer cf">
+												<p class="footer-comment-count">
+													<?php comments_number( '', __( '<span>1</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?>
+												</p>
 
-										</footer>
+											</footer>
 
-									</article>
-									
+										</article>
+									</a>	
 								</div>
 
 							<?php endwhile; ?>

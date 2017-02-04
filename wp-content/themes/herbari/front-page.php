@@ -13,18 +13,23 @@
 								<?php while (have_posts()) : the_post(); 
 								$featured_image = get_field("featured_image");
 								$size = "full"; 
+								$blurb = get_field("blurb");
 								?>
 								<div class="masonry-item">
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 									<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
 										<header class="article-header">
 
-											<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+								
+											<h1 class="h2 entry-title"><?php the_title(); ?></h1>
+
 											<p class="byline entry-meta vcard">
 																				<?php print(
 															/* the time the post was published */
 															'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
 														); ?>
+
 											</p>
 
 										</header>
@@ -39,7 +44,8 @@
 											<?php }
 											else { ?>
 											<div class="post-excerpt">
-												<?php the_excerpt(); ?>
+												<?php echo $blurb; ?>
+												<div class="read-more">Read more <i class="fa fa-angle-double-right" aria-hidden="true"></i><div>
 											</div>
 											<?php } ?>
 										</section>
@@ -52,7 +58,7 @@
 										</footer>
 
 									</article>
-									
+								</a>
 								</div>
 
 								<?php endwhile; ?>
