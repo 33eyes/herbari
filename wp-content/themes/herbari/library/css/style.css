@@ -1677,9 +1677,18 @@ WORDPRESS MASONRY STYLES - AI
 /******************************************************************
 ABOUT PAGE STYLES -- Arina
 ******************************************************************/
-.page-template-page-about .entry-content p {
-  font-size: 1.3em;
-  padding-top: 2em; }
+.page-template-page-about .entry-content {
+  margin-top: 1.5em; }
+  .page-template-page-about .entry-content h2 {
+    margin: 0;
+    color: green;
+    font-family: tuna;
+    font-size: 1.65em; }
+  .page-template-page-about .entry-content h3 {
+    font-size: 1.4em;
+    font-weight: bold; }
+  .page-template-page-about .entry-content p {
+    font-size: 1.15em; }
 
 /******************************************************************
 PAGE NAVI STYLES
