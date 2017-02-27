@@ -1655,7 +1655,7 @@ WORDPRESS MASONRY STYLES - AI
   #masonry-container .masonry-item .hentry .entry-content {
     padding: 0 1em; }
     #masonry-container .masonry-item .hentry .entry-content .post-excerpt {
-      font-family: tuna;
+      font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #212121;
       font-size: 16px;
       font-weight: normal; }
