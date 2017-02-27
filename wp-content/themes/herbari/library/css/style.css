@@ -1966,6 +1966,14 @@ tweeners.
       background-color: rgba(14, 185, 0, 0.2);
       color: #fff;
       text-decoration: none; }
+  .nav li.bop-nav-search {
+    height: 36px;
+    vertical-align: top; }
+    .nav li.bop-nav-search form label span.screen-reader-text {
+      display: none; }
+    .nav li.bop-nav-search form label input.search-field {
+      width: 100px;
+      height: 28px; }
 
   /*********************
   POSTS & CONTENT STYLES

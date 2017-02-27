@@ -57,6 +57,23 @@ NAVIGATION STYLES
 			text-decoration: none;
 		}
 	}
+	
+	// Search box in nav menu
+	li.bop-nav-search {
+		height: 36px;
+		vertical-align: top;
+		
+		form label {
+			span.screen-reader-text {
+				display: none;
+			}
+			input.search-field {
+				width: 100px;
+				height: 28px;
+			}
+		}
+	}
+	
 }
 
 
