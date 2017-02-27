@@ -237,7 +237,10 @@ NAVIGATION STYLES
     display: none; }
   .nav li.bop-nav-search form label input.search-field {
     width: 100px;
-    height: 28px; }
+    height: 28px;
+    margin-bottom: 0; }
+  .nav li.bop-nav-search form input[type="submit"] {
+    vertical-align: top; }
 
 /*********************
 POSTS & CONTENT STYLES

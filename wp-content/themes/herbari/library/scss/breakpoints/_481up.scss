@@ -63,13 +63,19 @@ NAVIGATION STYLES
 		height: 36px;
 		vertical-align: top;
 		
-		form label {
-			span.screen-reader-text {
-				display: none;
+		form {
+			label {
+				span.screen-reader-text {
+					display: none;
+				}
+				input.search-field {
+					width: 100px;
+					height: 28px;
+					margin-bottom: 0;
+				}
 			}
-			input.search-field {
-				width: 100px;
-				height: 28px;
+			input[type="submit"] {
+				vertical-align: top;
 			}
 		}
 	}
