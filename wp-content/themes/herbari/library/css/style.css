@@ -1492,7 +1492,7 @@ POSTS & CONTENT STYLES
     padding: 1.5em; }
   .hentry .entry-content .post-excerpt {
     padding: 15px;
-    font-family: tuna;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.2em; }
     .hentry .entry-content .post-excerpt p {
       margin: 0; }
