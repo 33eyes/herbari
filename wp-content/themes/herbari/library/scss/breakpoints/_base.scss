@@ -995,7 +995,47 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+    background-color: $hfs-color;
+    border-radius: 3px;
+	margin-bottom: 2em;
+	
+	.widgettitle {
+		color: $highlight-color;
+		font-size: 2.5em;
+		margin-bottom: 0em;
+	}
+
+	form[role="search"] {
+		input[type="search"] {
+			background-color: white;
+			width: 65%;
+			display: inline-block;
+			border-radius: 3px 0px 0px 3px;			
+			//margin-bottom: 12px;
+			margin-right: -2.5px;
+			vertical-align: top;
+		}
+		button#searchsubmit {
+			display: inline-block;
+			border-radius: 0px 3px 3px 0px;
+		    height: 40px;
+			width: 40px;
+			border: none;
+			color: white;
+			background-color: $highlight-color;
+			vertical-align: top;
+			
+			&:hover, &:focus {
+				background-color: $highlight-color-mid;
+			}
+
+			&:active {
+				background-color: $highlight-color-mid;
+			}
+		}
+	}
+}
 
 	.widgettitle {}
 

@@ -1004,7 +1004,7 @@ textarea,
   height: 40px;
   line-height: 1em;
   padding: 0 12px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   font-size: 1em;
   color: #3f3f3f;
   border-radius: 3px;
@@ -1876,6 +1876,35 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.sidebar {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  margin-bottom: 2em; }
+  .sidebar .widgettitle {
+    color: rgba(14, 185, 0, 0.38);
+    font-size: 2.5em;
+    margin-bottom: 0em; }
+  .sidebar form[role="search"] input[type="search"] {
+    background-color: white;
+    width: 65%;
+    display: inline-block;
+    border-radius: 3px 0px 0px 3px;
+    margin-right: -2.5px;
+    vertical-align: top; }
+  .sidebar form[role="search"] button#searchsubmit {
+    display: inline-block;
+    border-radius: 0px 3px 3px 0px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    color: white;
+    background-color: rgba(14, 185, 0, 0.38);
+    vertical-align: top; }
+    .sidebar form[role="search"] button#searchsubmit:hover, .sidebar form[role="search"] button#searchsubmit:focus {
+      background-color: rgba(14, 185, 0, 0.58); }
+    .sidebar form[role="search"] button#searchsubmit:active {
+      background-color: rgba(14, 185, 0, 0.58); }
+
 .widget ul li {
   /* deep nesting */ }
 
@@ -2150,7 +2179,6 @@ you can add resource intensive styles.
     margin-top: 2.2em; }
 
   .widgettitle {
-    border-bottom: 2px solid #444;
     margin-bottom: 0.75em; }
 
   .widget {
