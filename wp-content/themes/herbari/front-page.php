@@ -4,7 +4,7 @@
 
 				<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="m-all t-all d-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="m-all t-all d-4of5 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : ?>
 							
@@ -86,6 +86,8 @@
 
 						</main>
 
+					<?php get_sidebar(); ?>
+					
 				</div>
 
 			</div>

@@ -362,6 +362,7 @@ article.plants {
 			    
 			color: black;
 			font-weight: bold;
+			font-size: 1.5em;
 		}
 
 		.single-title {}
@@ -614,7 +615,7 @@ WORDPRESS MASONRY STYLES - AI
 				.read-more {
 					color: white;
 					font-weight: bold;
-					font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+					font-family: $lato;
 				}
 				
 				.likebtn_container {

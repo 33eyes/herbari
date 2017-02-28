@@ -1524,7 +1524,8 @@ article.plants .plant-content {
   margin: 0;
   font-family: tuna;
   color: black;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 1.5em; }
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1966,17 +1967,6 @@ tweeners.
       background-color: rgba(14, 185, 0, 0.2);
       color: #fff;
       text-decoration: none; }
-  .nav li.bop-nav-search {
-    height: 36px;
-    vertical-align: top; }
-    .nav li.bop-nav-search form label span.screen-reader-text {
-      display: none; }
-    .nav li.bop-nav-search form label input.search-field {
-      width: 100px;
-      height: 28px;
-      margin-bottom: 0; }
-    .nav li.bop-nav-search form input[type="submit"] {
-      vertical-align: top; }
 
   /*********************
   POSTS & CONTENT STYLES
