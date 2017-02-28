@@ -18,3 +18,15 @@ be seen on the Desktop.
 		width: 700px;
 	}
 }
+
+/*********************
+Wordpress Masonry styles - AI
+*********************/
+
+/* Makes three columns */
+#masonry-container {
+	.masonry-item {
+		width: 31%;
+		margin: 0 1% 2%;
+	}
+}

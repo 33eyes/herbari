@@ -49,7 +49,7 @@ Wordpress Masonry styles - AI
 /* Makes three columns */
 #masonry-container {
 	.masonry-item {
-		width: 31%;
+		width: 48%;
 		margin: 0 1% 2%;
 		
 		.post-excerpt {
@@ -203,33 +203,8 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 2.2em;
+	//margin-top: 2.2em;
 }
-
-	.widgettitle {
-		margin-bottom: 0.75em;
-	}
-
-	.widget {
-		padding: 0 10px;
-		margin: 2.2em 0;
-
-		ul {
-			li {
-				margin-bottom: 0.75em;
-
-				&:first-child {}
-				&:last-child {}
-				a {}
-				/* deep nesting */
-
-				ul {
-					margin-top: 0.75em;
-					padding-left: 1em;
-				}
-			}
-		}
-	}
 
 
 	/* links widget */

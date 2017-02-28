@@ -134,6 +134,37 @@ them however you see fit.
     width: 80%;
   }
 
+  
+  .t-1of7 {
+    @include grid-col;
+    width: 14.2857142857%;
+  }
+
+  .t-2of7 {
+    @include grid-col;
+    width: 28.5714286%;
+  }
+
+  .t-3of7 {
+    @include grid-col;
+    width: 42.8571429%;
+  }
+
+  .t-4of7 {
+    @include grid-col;
+    width: 57.1428572%;
+  }
+
+  .t-5of7 {
+    @include grid-col;
+    width: 71.4285715%;
+  }
+
+  .t-6of7 {
+    @include grid-col;
+    width: 85.7142857%;
+  }
+  
 } // end tablet
 
 /* Landscape to small desktop */

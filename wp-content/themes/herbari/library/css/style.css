@@ -753,7 +753,37 @@ them however you see fit.
   .t-4of5 {
     float: left;
     padding-right: 0.75em;
-    width: 80%; } }
+    width: 80%; }
+
+  .t-1of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 14.2857142857%; }
+
+  .t-2of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 28.5714286%; }
+
+  .t-3of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 42.8571429%; }
+
+  .t-4of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 57.1428572%; }
+
+  .t-5of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 71.4285715%; }
+
+  .t-6of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 85.7142857%; } }
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
   .d-all {
@@ -1905,8 +1935,15 @@ SIDEBARS & ASIDES
     .sidebar form[role="search"] button#searchsubmit:active {
       background-color: rgba(14, 185, 0, 0.58); }
 
-.widget ul li {
-  /* deep nesting */ }
+.widget {
+  padding: 0 10px;
+  margin: 2.2em 0; }
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */ }
+    .widget ul li ul {
+      margin-top: 0.75em;
+      padding-left: 1em; }
 
 .no-widgets {
   background-color: #fff;
@@ -2086,7 +2123,7 @@ you can add resource intensive styles.
   *********************/
   /* Makes three columns */
   #masonry-container .masonry-item {
-    width: 31%;
+    width: 48%;
     margin: 0 1% 2%; }
     #masonry-container .masonry-item .post-excerpt {
       font-family: tuna;
@@ -2175,22 +2212,6 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  .sidebar {
-    margin-top: 2.2em; }
-
-  .widgettitle {
-    margin-bottom: 0.75em; }
-
-  .widget {
-    padding: 0 10px;
-    margin: 2.2em 0; }
-    .widget ul li {
-      margin-bottom: 0.75em;
-      /* deep nesting */ }
-      .widget ul li ul {
-        margin-top: 0.75em;
-        padding-left: 1em; }
-
   /* links widget */
   /* meta widget */
   /* pages widget */
@@ -2239,7 +2260,15 @@ you can add resource intensive styles.
     width: 1040px; }
 
   .single .wrap, .page-template-page-about .wrap {
-    width: 700px; } }
+    width: 700px; }
+
+  /*********************
+  Wordpress Masonry styles - AI
+  *********************/
+  /* Makes three columns */
+  #masonry-container .masonry-item {
+    width: 31%;
+    margin: 0 1% 2%; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.

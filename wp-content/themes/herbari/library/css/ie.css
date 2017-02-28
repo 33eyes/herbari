@@ -314,7 +314,7 @@ Wordpress Masonry styles - AI
 *********************/
 /* Makes three columns */
 #masonry-container .masonry-item {
-  width: 31%;
+  width: 48%;
   margin: 0 1% 2%; }
   #masonry-container .masonry-item .post-excerpt {
     font-family: tuna;
@@ -403,22 +403,6 @@ NAVIGATION STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-.sidebar {
-  margin-top: 2.2em; }
-
-.widgettitle {
-  margin-bottom: 0.75em; }
-
-.widget {
-  padding: 0 10px;
-  margin: 2.2em 0; }
-  .widget ul li {
-    margin-bottom: 0.75em;
-    /* deep nesting */ }
-    .widget ul li ul {
-      margin-top: 0.75em;
-      padding-left: 1em; }
-
 /* links widget */
 /* meta widget */
 /* pages widget */
@@ -461,6 +445,14 @@ be seen on the Desktop.
 
 .single .wrap, .page-template-page-about .wrap {
   width: 700px; }
+
+/*********************
+Wordpress Masonry styles - AI
+*********************/
+/* Makes three columns */
+#masonry-container .masonry-item {
+  width: 31%;
+  margin: 0 1% 2%; }
 
 /*
 you can call the larger styles if you want, but there's really no need

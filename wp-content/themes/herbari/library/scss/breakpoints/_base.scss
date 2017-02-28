@@ -1012,7 +1012,6 @@ SIDEBARS & ASIDES
 			width: 65%;
 			display: inline-block;
 			border-radius: 3px 0px 0px 3px;			
-			//margin-bottom: 12px;
 			margin-right: -2.5px;
 			vertical-align: top;
 		}
@@ -1036,29 +1035,29 @@ SIDEBARS & ASIDES
 		}
 	}
 }
-
 	.widgettitle {}
 
 	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
 
 		ul {
-
 			li {
+				margin-bottom: 0.75em;
 
 				&:first-child {}
-
 				&:last-child {}
-
 				a {}
-
 				/* deep nesting */
-				ul {}
 
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
 			}
-
 		}
-
 	}
+
 
 	.no-widgets {
 		background-color: $white;
