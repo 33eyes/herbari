@@ -8,9 +8,9 @@ just edit things like thumbnail sizes, header images,
 sidebars, comments, etc.
 */
 
-/* Custom function -- modify query on home page to display both posts and plants (custom post type) */
+/* Custom function -- modify query on home and search pages to display both posts and plants (custom post type) */
 function foo_modify_query_order( $query ) {
-    if ( $query->is_home() && $query->is_main_query() ) 
+    if ( ($query->is_home() || $query->is_search()) && $query->is_main_query() ) 
         $query->set( 'post_type' , array('post', 'plants') );
 	return $query;
 }

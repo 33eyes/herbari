@@ -1,51 +1,74 @@
 <?php get_header(); ?>
-
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
+						<main id="main" class="m-all t-5of7 d-4of5 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+							<h1 class="page-title"><?php echo single_term_title("", false); ?></h1>
 							<?php
-							the_archive_title( '<h1 class="page-title">', '</h1>' );
 							the_archive_description( '<div class="taxonomy-description">', '</div>' );
 							?>
 							
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php if (have_posts()) : ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+							<div id="masonry-container">
+								
+								<?php while (have_posts()) : the_post(); 
+								$featured_image = get_field("featured_image");
+								$size = "full"; 
+								$blurb = get_field("blurb");
+								?>
+								<div class="masonry-item">
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+									<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
-								<header class="entry-header article-header">
+										<header class="article-header">
 
-									<h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									<p class="byline entry-meta vcard">
-										<?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
-                  							     /* the time the post was published */
-                  							     '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-                       								/* the author of the post */
-                       								'<span class="by">'.__('by', 'bonestheme').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                    							); ?>
-									</p>
+								
+											<h1 class="h2 entry-title"><?php the_title(); ?></h1>
 
-								</header>
+											<p class="byline entry-meta vcard">
+																				<?php print(
+															/* the time the post was published */
+															'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
+														); ?>
 
-								<section class="entry-content cf">
+											</p>
 
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+										</header>
 
-									<?php the_excerpt(); ?>
+										<section class="entry-content cf">
+										
+										<?php if($featured_image) { ?>
+											
+											<div class="plant-featured-image text-center">
+											<?php echo wp_get_attachment_image( $featured_image, $size ); ?>
+											</div>
+											<?php }
+											else { ?>
+											<div class="post-excerpt">
+												<?php echo $blurb; ?>
+												<div class="read-more">Read more <i class="fa fa-angle-double-right" aria-hidden="true"></i><div>
+											</div>
+											<?php } ?>
+										</section>
 
-								</section>
+										<footer class="article-footer cf">
+											<p class="footer-comment-count">
+												<?php comments_number( '', __( '<span>1</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?>
+											</p>
 
-								<footer class="article-footer">
+										</footer>
 
-								</footer>
-
-							</article>
+									</article>
+								</a>
+								</div>
 
 							<?php endwhile; ?>
 
-									<?php bones_page_navi(); ?>
+							</div>
+							
+							<?php bones_page_navi(); ?>
 
 							<?php else : ?>
 
@@ -72,3 +95,18 @@
 			</div>
 
 <?php get_footer(); ?>
+
+
+<!-- Wordpress Masonry script -->
+<script type="text/javascript">	
+
+	jQuery(window).load(function() {
+		var container = document.querySelector('#masonry-container');
+		var msnry = new Masonry( container, {
+			itemSelector: '.masonry-item',
+			columnWidth: '.masonry-item',                
+		});  
+  
+	});
+
+</script>

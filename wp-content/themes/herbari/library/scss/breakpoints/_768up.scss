@@ -28,8 +28,10 @@ LAYOUT & GRID STYLES
     max-width: inherit;
 }
 
-.single #main {
+.full-post {
     max-width: 700px;
+    float: right;
+    margin-right: 2%;
 }
 
 /*********************
@@ -46,7 +48,7 @@ article.plants {
 Wordpress Masonry styles - AI
 *********************/
 
-/* Makes three columns */
+/* Makes two columns */
 #masonry-container {
 	.masonry-item {
 		width: 48%;

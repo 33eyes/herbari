@@ -367,7 +367,14 @@ article.plants {
 
 		.single-title {}
 
-		.page-title {}
+		.page-title, .archive-title {
+			margin-bottom: 0.35em;
+			margin-left: 0.25em;
+			font-size: 3em;
+			color: $highlight-color-mid;
+			font-family: $lato;
+			margin-top: 0;
+		}
 
 		.entry-title {}
 

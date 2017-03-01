@@ -300,8 +300,10 @@ LAYOUT & GRID STYLES
 .wrap {
   max-width: inherit; }
 
-.single #main {
-  max-width: 700px; }
+.full-post {
+  max-width: 700px;
+  float: right;
+  margin-right: 2%; }
 
 /*********************
 POSTS & CONTENT STYLES
@@ -312,7 +314,7 @@ article.plants .plant-details {
 /*********************
 Wordpress Masonry styles - AI
 *********************/
-/* Makes three columns */
+/* Makes two columns */
 #masonry-container .masonry-item {
   width: 48%;
   margin: 0 1% 2%; }
@@ -442,9 +444,6 @@ be seen on the Desktop.
 ******************************************************************/
 .wrap {
   width: 1040px; }
-
-.single .wrap, .page-template-page-about .wrap {
-  width: 700px; }
 
 /*********************
 Wordpress Masonry styles - AI

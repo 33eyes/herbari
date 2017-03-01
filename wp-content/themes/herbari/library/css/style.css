@@ -1557,6 +1557,14 @@ article.plants .plant-content {
   font-weight: bold;
   font-size: 1.5em; }
 
+.page-title, .archive-title {
+  margin-bottom: 0.35em;
+  margin-left: 0.25em;
+  font-size: 3em;
+  color: rgba(14, 185, 0, 0.58);
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 0; }
+
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
 /* general post style */
@@ -2109,8 +2117,10 @@ you can add resource intensive styles.
   .wrap {
     max-width: inherit; }
 
-  .single #main {
-    max-width: 700px; }
+  .full-post {
+    max-width: 700px;
+    float: right;
+    margin-right: 2%; }
 
   /*********************
   POSTS & CONTENT STYLES
@@ -2121,7 +2131,7 @@ you can add resource intensive styles.
   /*********************
   Wordpress Masonry styles - AI
   *********************/
-  /* Makes three columns */
+  /* Makes two columns */
   #masonry-container .masonry-item {
     width: 48%;
     margin: 0 1% 2%; }
@@ -2258,9 +2268,6 @@ you can add resource intensive styles.
   ******************************************************************/
   .wrap {
     width: 1040px; }
-
-  .single .wrap, .page-template-page-about .wrap {
-    width: 700px; }
 
   /*********************
   Wordpress Masonry styles - AI

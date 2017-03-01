@@ -20,76 +20,76 @@
 
 				<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="m-all t-all d-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="m-all t-5of7 d-4of5 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+							<div class="full-post">
+								<?php if (have_posts()) : while (have_posts()) : the_post(); 
+								$featured_image = get_field("featured_image");
+								$size = "full"; 
+								$plant_details = get_field("plant_details");
+								?>
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); 
-							$featured_image = get_field("featured_image");
-							$size = "full"; 
-							$plant_details = get_field("plant_details");
-							?>
+								<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+									<header class="article-header">
 
-								<header class="article-header">
+										<h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
+										<p class="byline vcard">
+											<?php print(
+											/* the time the post was published */
+											'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
+											); ?>
+										</p>
 
-									<h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
-									<p class="byline vcard">
-										<?php print(
-										/* the time the post was published */
-										'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
-										); ?>
-									</p>
+									</header>
 
-								</header>
-
-								<section class="entry-content cf">
-									<div>
-										<div class="plant-featured-image t-1of2 d-1of2">
-											<?php if($featured_image) { 
-												echo wp_get_attachment_image( $featured_image, $size );
-											} ?>
+									<section class="entry-content cf">
+										<div>
+											<div class="plant-featured-image t-1of2 d-1of2">
+												<?php if($featured_image) { 
+													echo wp_get_attachment_image( $featured_image, $size );
+												} ?>
+											</div>
+											<div class="plant-details t-1of2 d-1of2">
+												<?php echo $plant_details; ?>
+											</div>
 										</div>
-										<div class="plant-details t-1of2 d-1of2">
-											<?php echo $plant_details; ?>
+										<div class="t-all d-all">
+											<div class="plant-content">
+												<?php the_content(); ?>
+											</div>
 										</div>
-									</div>
-									<div class="t-all d-all">
-										<div class="plant-content">
-											<?php the_content(); ?>
-										</div>
-									</div>
-								</section> <!-- end article section -->
+									</section> <!-- end article section -->
 
-								<footer class="article-footer">
-									<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">' . __( 'Custom Tags:', 'bonestheme' ) . '</span> ', ', ' ) ?></p>
+									<footer class="article-footer">
+										<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">' . __( 'Custom Tags:', 'bonestheme' ) . '</span> ', ', ' ) ?></p>
 
-								</footer>
+									</footer>
 
-								<?php comments_template(); ?>
+									<?php comments_template(); ?>
 
-							</article>
+								</article>
 
-							<?php endwhile; ?>
+								<?php endwhile; ?>
 
-							<?php else : ?>
+								<?php else : ?>
 
-									<article id="post-not-found" class="hentry cf">
-										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single-plants.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
+										<article id="post-not-found" class="hentry cf">
+											<header class="article-header">
+												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+											</header>
+											<section class="entry-content">
+												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+											</section>
+											<footer class="article-footer">
+												<p><?php _e( 'This is the error message in the single-plants.php template.', 'bonestheme' ); ?></p>
+											</footer>
+										</article>
 
-							<?php endif; ?>
-
+								<?php endif; ?>
+							</div>
 						</main>
 
-						<?php //get_sidebar(); ?>
+						<?php get_sidebar(); ?>
 
 				</div>
 
