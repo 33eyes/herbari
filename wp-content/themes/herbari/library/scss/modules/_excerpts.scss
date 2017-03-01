@@ -13,3 +13,8 @@ Make post excerpts look pretty.
 		background-color: $color-category-uncategorized;
 	}
 }
+.hentry.category-uncategorized {
+	.entry-content .post-excerpt {
+		background-color: $color-category-plant-care;
+	}
+}

@@ -1294,6 +1294,9 @@ Make post excerpts look pretty.
 .hentry.category-uncategorized .entry-content .post-excerpt {
   background-color: #f5ddff; }
 
+.hentry.category-uncategorized .entry-content .post-excerpt {
+  background-color: #dfffdd; }
+
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
